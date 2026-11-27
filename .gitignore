@@ -1,4 +1,11 @@
 node_modules/
 storage/
 .env
+.env.*
+!.env.example
 *.log
+.freebuff/
+.cloud-attachments/
+apercu-*.png
+.DS_Store
+Thumbs.db
