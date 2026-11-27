@@ -4,6 +4,7 @@ Galerie d'images privée, auto-hébergée, en Node.js. Chaque compte possède so
 
 ![Node.js](https://img.shields.io/badge/Node.js-%E2%89%A520-3c873a)
 ![MySQL](https://img.shields.io/badge/MySQL%20%2F%20MariaDB-8%2B-4479a1)
+![Licence MIT](https://img.shields.io/badge/licence-MIT-4b7bff)
 
 ---
 
@@ -20,6 +21,7 @@ Galerie d'images privée, auto-hébergée, en Node.js. Chaque compte possède so
 - [Sécurité](#sécurité)
 - [Structure du projet](#structure-du-projet)
 - [Dépannage](#dépannage)
+- [Licence](#licence)
 
 ---
 
@@ -177,3 +179,11 @@ Pixelio/
 | Le cookie ne persiste pas en production | `NODE_ENV=production` impose HTTPS ; servez le site derrière un reverse proxy TLS. |
 | Accès depuis un autre appareil | Mettez `HOST=0.0.0.0` et autorisez le port 3000 dans le pare-feu. |
 | Sauvegarde | Copiez le dossier `storage/` et exportez la base (`mysqldump vault_images`). |
+
+---
+
+## Licence
+
+Ce projet est publié sous licence **MIT** : voir le fichier [LICENSE](LICENSE). Vous pouvez l'utiliser, le modifier, le redistribuer et le vendre librement, à condition de conserver la mention de copyright et le texte de la licence.
+
+Le code source est couvert par cette licence ; le logo **Pixelio** (`public/assets/img/pixelio-logo.webp`, `public/assets/img/pixelio-mark.webp`) reste la marque de son auteur et ne peut pas être réutilisé comme identité d'un autre produit.
