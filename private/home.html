@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pixelio — votre galerie d'images privée</title>
-<meta name="description" content="Pixelio est une galerie d'images privée : un compte personnel, un dépôt par glisser-déposer, une recherche instantanée. Vos fichiers restent sur votre serveur.">
+<meta name="description" content="Pixelio est une galerie d'images privée : un compte personnel, des groupes pour ranger, un partage par lien révocable. Vos fichiers restent sur votre serveur.">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=7">
-<link rel="stylesheet" href="/assets/home.css?v=7">
+<link rel="stylesheet" href="/assets/style.css?v=9">
+<link rel="stylesheet" href="/assets/home.css?v=9">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="home">
@@ -26,8 +26,9 @@
 
     <nav class="nav-links" aria-label="Sections">
       <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#apercu">Aperçu</a>
       <a href="#confidentialite">Confidentialité</a>
-      <a href="#etapes">Comment ça marche</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
     <div class="nav-cta">
@@ -47,49 +48,95 @@
         <span class="eyebrow"><i aria-hidden="true"></i> Galerie privée · auto-hébergée</span>
         <h1>Vos images,<br><em>à l'abri</em> des regards.</h1>
         <p class="lead">
-          Un espace personnel pour déposer, retrouver et organiser vos photos.
-          Chaque compte a son propre coffre — et vos fichiers ne quittent jamais votre serveur.
+          Pixelio garde vos photos sur votre propre serveur : un compte, un mot de passe,
+          et rien ne part ailleurs. Rangez-les en groupes, retrouvez-les en une recherche,
+          partagez-en une par lien — sans jamais exposer le reste.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary btn-lg" href="/register" data-cta-primary>Créer ma galerie</a>
           <a class="btn btn-ghost btn-lg" href="/login" data-cta-secondary>J'ai déjà un compte</a>
         </div>
         <ul class="hero-facts">
-          <li>JPEG · PNG · WebP · GIF · AVIF</li>
-          <li>20 Mo par fichier</li>
+          <li>Aucun cloud tiers</li>
           <li>Aucune publicité</li>
+          <li>Partage révocable</li>
         </ul>
       </div>
 
-      <div class="hero-art" aria-hidden="true">
-        <div class="stack">
-          <figure class="shot shot-1"><img src="/assets/img/hero-1.jpg" alt="" width="1184" height="880"></figure>
-          <figure class="shot shot-2"><img src="/assets/img/hero-2.jpg" alt="" width="880" height="1184"></figure>
-          <figure class="shot shot-3"><img src="/assets/img/hero-3.jpg" alt="" width="1024" height="1024"></figure>
-          <div class="chip chip-1">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="10.5" width="16" height="10" rx="2.5"></rect>
-              <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"></path>
-            </svg>
-            Privé par compte
+      <div class="hero-art">
+        <div class="app-mock" aria-hidden="true">
+          <div class="mock-bar">
+            <span class="mock-dots"><i></i><i></i><i></i></span>
+            <span class="mock-url">pixelio.local/app</span>
           </div>
-          <div class="chip chip-2">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4.5" width="18" height="15" rx="3"></rect>
-              <path d="m5.5 16.5 4.8-5.2 3.4 3.6L16.8 12l2.4 3.6"></path>
-            </svg>
-            128 images · 1,4 Go
+          <div class="mock-body">
+            <div class="mock-side">
+              <span class="mock-label">Bibliothèque</span>
+              <span class="mock-nav is-on"><i class="mi"></i>Toutes les images<em>128</em></span>
+              <span class="mock-nav"><i class="mi"></i>Non classées<em>12</em></span>
+              <span class="mock-label">Groupes</span>
+              <span class="mock-nav"><i class="mi"></i>Voyages<em>42</em></span>
+              <span class="mock-nav"><i class="mi"></i>Équipe<em>31</em></span>
+              <span class="mock-nav"><i class="mi"></i>Captures<em>18</em></span>
+              <span class="mock-label">Partage</span>
+              <span class="mock-nav"><i class="mi"></i>Partages actifs<em>3</em></span>
+            </div>
+            <div class="mock-main">
+              <div class="mock-head">
+                <strong>Toutes les images</strong>
+                <span>128 / 128</span>
+              </div>
+              <div class="mock-grid">
+                <figure>
+                  <img src="/assets/img/gallery-coast.jpg" alt="" width="1184" height="880">
+                  <span class="mock-badge">Partagé</span>
+                </figure>
+                <figure><img src="/assets/img/hero-1.jpg" alt="" width="1184" height="880"></figure>
+                <figure><img src="/assets/img/gallery-ramen.jpg" alt="" width="1184" height="880"></figure>
+                <figure><img src="/assets/img/hero-3.jpg" alt="" width="1024" height="1024"></figure>
+                <figure><img src="/assets/img/gallery-desk.jpg" alt="" width="1184" height="880"></figure>
+                <figure><img src="/assets/img/hero-2.jpg" alt="" width="880" height="1184"></figure>
+              </div>
+              <div class="mock-drop"><i></i> Glissez vos images ici · JPEG, PNG, WebP</div>
+            </div>
           </div>
         </div>
+
+        <div class="chip chip-1">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="10.5" width="16" height="10" rx="2.5"></rect>
+            <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"></path>
+          </svg>
+          Privé par compte
+        </div>
+
+        <div class="mock-share" aria-hidden="true">
+          <span class="mock-share-title">Lien de partage</span>
+          <div class="mock-share-row">
+            <span class="mock-input">/s/9f3c8a7d41e2…</span>
+            <span class="mock-copy">Copier</span>
+          </div>
+          <span class="mock-share-foot">Révocable à tout moment</span>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Chiffres -->
+  <section class="stats-band" aria-label="Le projet en chiffres">
+    <div class="wrap stats-grid">
+      <div class="stat"><strong>20 Mo</strong><span>par image</span></div>
+      <div class="stat"><strong>20</strong><span>images par envoi</span></div>
+      <div class="stat"><strong>5</strong><span>formats acceptés</span></div>
+      <div class="stat"><strong>0</strong><span>service tiers</span></div>
     </div>
   </section>
 
   <!-- Bandeau formats -->
   <div class="strip" aria-hidden="true">
     <div class="marquee">
-      <span>JPEG</span><span>PNG</span><span>WEBP</span><span>GIF</span><span>AVIF</span><span>Glisser-déposer</span><span>Recherche instantanée</span><span>Visionneuse plein écran</span><span>Comptes privés</span>
-      <span>JPEG</span><span>PNG</span><span>WEBP</span><span>GIF</span><span>AVIF</span><span>Glisser-déposer</span><span>Recherche instantanée</span><span>Visionneuse plein écran</span><span>Comptes privés</span>
+      <span>JPEG</span><span>PNG</span><span>WEBP</span><span>GIF</span><span>AVIF</span><span>Groupes</span><span>Recherche instantanée</span><span>Visionneuse plein écran</span><span>Partage révocable</span>
+      <span>JPEG</span><span>PNG</span><span>WEBP</span><span>GIF</span><span>AVIF</span><span>Groupes</span><span>Recherche instantanée</span><span>Visionneuse plein écran</span><span>Partage révocable</span>
     </div>
   </div>
 
@@ -99,7 +146,7 @@
       <div class="section-head" data-reveal>
         <span class="eyebrow">Fonctionnalités</span>
         <h2>Tout pour <em>ranger</em> vos images, rien de superflu.</h2>
-        <p>Un dépôt rapide, une recherche instantanée, un espace strictement personnel. L'essentiel, fait proprement.</p>
+        <p>Un dépôt rapide, des groupes pour trier, une recherche instantanée et un partage maîtrisé. L'essentiel, fait proprement.</p>
       </div>
 
       <div class="cards">
@@ -112,6 +159,17 @@
           </span>
           <h3>Un coffre par compte</h3>
           <p>Vos images sont rattachées à votre session. Aucun autre compte ne peut les lister ni ouvrir un seul fichier.</p>
+        </article>
+
+        <article class="card-f" data-reveal>
+          <span class="f-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h3l2 2.5h6A2.5 2.5 0 0 1 20 10v7.5A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5z"></path>
+              <path d="M9 14h6"></path>
+            </svg>
+          </span>
+          <h3>Groupes et tri rapide</h3>
+          <p>Créez un groupe par projet, déplacez une image d'un dossier à l'autre, supprimez un groupe sans perdre une photo.</p>
         </article>
 
         <article class="card-f" data-reveal>
@@ -140,25 +198,12 @@
         <article class="card-f" data-reveal>
           <span class="f-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="7"></circle>
-              <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+              <path d="M10 13.5a4 4 0 0 0 5.7.4l3-3a4 4 0 0 0-5.7-5.7l-1.7 1.7"></path>
+              <path d="M14 10.5a4 4 0 0 0-5.7-.4l-3 3a4 4 0 0 0 5.7 5.7l1.7-1.7"></path>
             </svg>
           </span>
-          <h3>Recherche instantanée</h3>
-          <p>Le filtre s'applique à la frappe, sans rechargement : retrouvez une photo par son nom en une seconde.</p>
-        </article>
-
-        <article class="card-f" data-reveal>
-          <span class="f-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 9V6a2 2 0 0 1 2-2h3"></path>
-              <path d="M20 9V6a2 2 0 0 0-2-2h-3"></path>
-              <path d="M4 15v3a2 2 0 0 0 2 2h3"></path>
-              <path d="M20 15v3a2 2 0 0 1-2 2h-3"></path>
-            </svg>
-          </span>
-          <h3>Visionneuse plein écran</h3>
-          <p>Un clic pour agrandir, les flèches du clavier pour naviguer, Échap pour fermer. L'expérience d'une vraie galerie.</p>
+          <h3>Partage maîtrisé</h3>
+          <p>Un lien par image, en lecture seule. Vous voyez tous les partages actifs au même endroit et les coupez d'un clic.</p>
         </article>
 
         <article class="card-f" data-reveal>
@@ -175,8 +220,59 @@
     </div>
   </section>
 
+  <!-- Aperçu -->
+  <section class="section section-alt" id="apercu">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Aperçu</span>
+        <h2>Une galerie qui <em>se range</em> d'elle-même.</h2>
+        <p>Voilà à quoi ressemble l'espace une fois vos photos déposées : une barre de groupes à gauche, la grille à droite, et les actions au survol.</p>
+      </div>
+
+      <div class="preview-grid">
+        <article class="preview-card" data-reveal>
+          <div class="preview-shot">
+            <div class="mini-list">
+              <span class="mini-row is-on"><i class="mi"></i>Voyages<em>42</em></span>
+              <span class="mini-row"><i class="mi"></i>Équipe<em>31</em></span>
+              <span class="mini-row"><i class="mi"></i>Captures<em>18</em></span>
+              <span class="mini-row"><i class="mi"></i>Non classées<em>12</em></span>
+            </div>
+            <div class="mini-thumbs">
+              <img src="/assets/img/gallery-coast.jpg" alt="" width="1184" height="880">
+              <img src="/assets/img/gallery-ramen.jpg" alt="" width="1184" height="880">
+              <img src="/assets/img/hero-1.jpg" alt="" width="1184" height="880">
+              <img src="/assets/img/gallery-desk.jpg" alt="" width="1184" height="880">
+            </div>
+          </div>
+          <h3>Un groupe par projet, un clic pour déplacer</h3>
+          <p>Choisissez un groupe dans la barre latérale : les prochains envois y vont directement. Dans la visionneuse, le menu « Groupe » déplace une image sans la supprimer.</p>
+        </article>
+
+        <article class="preview-card" data-reveal>
+          <div class="preview-shot preview-shot-center">
+            <div class="mini-share">
+              <img src="/assets/img/hero-3.jpg" alt="" width="1024" height="1024">
+              <div class="mini-share-body">
+                <strong>Rue de nuit.jpg</strong>
+                <span class="mini-share-meta">1,2 Mo · partagé le 27 nov.</span>
+                <div class="mini-share-row">
+                  <span class="mock-input">pixelio.local/s/9f3c8a…</span>
+                  <span class="mock-copy">Copier</span>
+                </div>
+              </div>
+            </div>
+            <span class="mini-revoke">Révoquer le lien</span>
+          </div>
+          <h3>Partagez une image, pas votre galerie</h3>
+          <p>Chaque lien ne donne accès qu'à une seule image, en lecture seule. La section « Partages actifs » les liste tous avec leur date et un bouton pour les révoquer immédiatement.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Confidentialité -->
-  <section class="section section-alt" id="confidentialite">
+  <section class="section" id="confidentialite">
     <div class="wrap split-inner">
       <div class="split-media" data-reveal>
         <img src="/assets/img/hero-3.jpg" alt="Photographie nocturne utilisée dans la galerie Pixelio" width="1024" height="1024">
@@ -203,15 +299,19 @@
             Aucun traqueur, aucune régie publicitaire, aucune dépendance externe
           </li>
         </ul>
-        <a class="link-arrow" href="/register" data-cta-primary>Ouvrir mon espace
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"></path><polyline points="12.5 6 18.5 12 12.5 18"></polyline></svg>
-        </a>
+        <div class="tech-row" data-reveal>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MySQL</span>
+          <span>scrypt</span>
+          <span>Licence MIT</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Étapes -->
-  <section class="section" id="etapes">
+  <section class="section section-alt" id="etapes">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <span class="eyebrow">Comment ça marche</span>
@@ -230,9 +330,47 @@
         </div>
         <div class="step" data-reveal>
           <span class="num">03</span>
-          <h3>Retrouvez-les en un clic</h3>
-          <p>Votre galerie s'affiche en grille, se filtre à la frappe et s'ouvre en plein écran. Vous seul y avez accès.</p>
+          <h3>Rangez et partagez</h3>
+          <p>Créez un groupe, déplacez vos images, puis partagez-en une par lien si besoin. Vous seul décidez qui voit quoi.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2>Ce que vous voulez <em>savoir</em>.</h2>
+        <p>Les réponses courtes aux questions qu'on nous pose avant de confier ses photos.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" data-reveal>
+          <summary>Où sont stockées mes images ?</summary>
+          <p>Dans le dossier <code>storage/</code> du serveur qui fait tourner Pixelio, jamais chez un hébergeur tiers. Chaque fichier est rangé sous l'identifiant de votre compte, hors du dossier public.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Qui peut voir mes photos ?</summary>
+          <p>Vous seul, une fois connecté. Un autre compte ne peut ni lister vos images ni ouvrir un fichier : chaque requête vérifie le propriétaire. Seul un lien de partage que vous créez donne accès à une image précise, en lecture seule.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Puis-je arrêter un partage ?</summary>
+          <p>Oui, immédiatement : depuis la visionneuse ou la section « Partages actifs ». Le lien devient alors inutilisable et la page publique affiche « Ce lien n'est plus actif ».</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Que se passe-t-il si je supprime une image ?</summary>
+          <p>Le fichier est effacé du disque, la ligne en base et ses liens de partage aussi. L'action est définitive, sans corbeille intermédiaire.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Faut-il un abonnement ou un serveur distant ?</summary>
+          <p>Non. Pixelio tourne en Node.js avec MySQL sur votre machine (XAMPP suffit). Aucun abonnement, aucune publicité, aucune limite imposée par un tiers.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Comment mes mots de passe sont-ils protégés ?</summary>
+          <p>Ils sont hachés avec scrypt et un sel unique, jamais stockés en clair. Les sessions vivent en base et le cookie de connexion est HttpOnly, SameSite=Lax, valable 7 jours.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -251,20 +389,45 @@
 </main>
 
 <footer class="site-foot">
-  <div class="wrap foot-inner">
-    <a class="brand" href="/">
-      <span class="brand-mark"><img src="/assets/img/pixelio-mark.webp" alt="" width="32" height="32"></span>
-      Pixelio <small>galerie</small>
-    </a>
-    <nav class="foot-links" aria-label="Liens de pied de page">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="/">
+        <span class="brand-mark"><img src="/assets/img/pixelio-mark.webp" alt="" width="32" height="32"></span>
+        Pixelio <small>galerie</small>
+      </a>
+      <p>Galerie d'images privée, auto-hébergée. Vos photos restent sur votre serveur.</p>
+      <span class="foot-version">v1.1.0 · licence MIT</span>
+    </div>
+
+    <nav class="foot-col" aria-label="Produit">
+      <span class="foot-title">Produit</span>
       <a href="#fonctionnalites">Fonctionnalités</a>
-      <a href="/login">Connexion</a>
-      <a href="/register">Créer un compte</a>
+      <a href="#apercu">Aperçu</a>
+      <a href="#etapes">Comment ça marche</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <p class="foot-note">Auto-hébergé · <span id="year">2026</span></p>
+
+    <nav class="foot-col" aria-label="Compte">
+      <span class="foot-title">Compte</span>
+      <a href="/register">Créer un compte</a>
+      <a href="/login">Connexion</a>
+      <a href="/app">Ma galerie</a>
+    </nav>
+
+    <nav class="foot-col" aria-label="Projet">
+      <span class="foot-title">Projet</span>
+      <a href="https://github.com/nolanofficiel/Pixelio" target="_blank" rel="noreferrer">Code source</a>
+      <a href="https://github.com/nolanofficiel/Pixelio/blob/main/README.md" target="_blank" rel="noreferrer">Documentation</a>
+      <a href="https://github.com/nolanofficiel/Pixelio/blob/main/LICENSE" target="_blank" rel="noreferrer">Licence MIT</a>
+    </nav>
+  </div>
+
+  <div class="wrap foot-bottom">
+    <p>© <span id="year">2026</span> Pixelio · auto-hébergé</p>
+    <p>Node.js · Express · MySQL</p>
   </div>
 </footer>
 
-<script src="/assets/home.js?v=7"></script>
+<script src="/assets/home.js?v=9"></script>
 </body>
 </html>
